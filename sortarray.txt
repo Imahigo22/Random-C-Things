@@ -1,0 +1,34 @@
+using System;
+
+namespace ArraySimplify
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int[] a = new int[7] { 0,5,5,3,7,7,8 };
+	
+			Array.Sort(a);
+
+         	for (int i = 0; i < a.Length; i++) 
+         	{
+				if (i == 6)
+				{
+					if (a[i] != a[i-1])
+					{
+						Console.Write(a[i] + " ");
+					}
+				}	
+				else
+				{
+					if (a[i] != a[i+1])
+					{
+						Console.Write(a[i] + " ");
+					}
+					
+				}
+			}	
+			
+		}		
+        }
+     }
